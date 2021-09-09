@@ -1,0 +1,36 @@
+%m2pm3prob3.tex 23.3.2008
+\documentclass{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\G{\Gamma}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\ni smfprob3(1617).tex
+\begin{center}
+{\bf SMF PROBLEMS 3.  2.2.2017}
+\end{center}
+
+\ni Q1.  This question is a continuation of Problem 2 in Practical 3.
+
+\begin{enumerate}
+ \item Use the \textit{princomp} function to run a PCA on the \texttt{UStreasury.csv} (in R, although you're welcome to use whichever language you wish). \textit{(Hint: the \textbf{summary} function gives the components weights, the loadings functions gives the components...)} and comment on which components to retain.
+\item Interpret the meaning of the significant components.
+\end{enumerate}
+
+\ni Q2.  If the variables in the dataset on which you plan to perform PCA are compatible (e.g. they are all daily returns on stocks) consideration of units is not usually required. But, if the components are incompatible (say, unemployment rate vs. tax receipts), some care needs to be taken.
+
+Consider two variables, with a correlation coefficient $r = 0.8$. 
+\begin{enumerate}
+\item Write down the correlation matrix. What are the eigenvalues? Which is the principal component? In which direction is most of the variation?
+\item Now suppose that variable 1 has variance $1,000,000$, and variable 2 variance $1$. Write down the covariance matrix. Which variable dominates the PCA?
+\item Variable 1 was measured in pounds. I now decide to convert it in millions of pounds. What the the new variance of Variable 1 and what happens to the eigenvectors of the covariance matrix? Does it matter?
+\end{enumerate}
+
+
+\hfil NHB/TLS \break
+
+
+\end{document} 

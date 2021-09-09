@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\q{\quad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+% \ni smfsoln6(17).tex \\
+\begin{center}
+{\bf SMF SOLUTIONS 6.  2.3.2017} \\
+\end{center}
+
+\ni Q1 ({\it Brownian bridge}). \\
+\i With the Brownian bridge defined as
+$$
+B_0(t) :- B(t) - t B(1),
+$$
+the mean is $E[B_0(t)] = E[B(t)] - t E[B(1)] = 0$.  So the covariance is, for $s, t \in [0,1]$    (as Brownian motion $B$ has covariance $cov(B(s), B(t)) = E[B(s)B(t)] = \min (s,t)$)
+\begin{eqnarray*}
+cov(B_0(s), B_0(t))
+&=& E[B_0(s).B_0(t)] \\
+&=& E[(B(s) - s B(1))(B(t) - t B(1)] \\
+&=& E[B(s) B(t)] - t E[B(s) B(1)] - s E[B(t) B(1)] + st E[B(1)^2] \\
+&=& \min (s,t) - st - st + st \\
+&=& \min (s,t) - st.
+\end{eqnarray*}
+
+\ni Q2 ({\it Median; breakdown point}). \\
+\i For simplicity, take the sample size odd.  The median is the point with half the data points below it.  These can go off to $- \infty$ (and/or the points above can go off to $+ \infty$) without dragging the median with them; but if more than half the points do this, they will drag the median with them.  So, the median has breakdown point $1/2$, as stated. \\
+
+\ni Q3 ({\it Quartiles; semi-inter-quartile range}, $SIQ$). \\
+\i The lower quartile has a quarter of the data points beneath it.  These can go off to $- \infty$ without dragging the lower quartile with them; but if more than a quarter do this, they will drag the lower quartile with them.  So, the lower quartile has breakdown point 1/4.  Similarly, so does the upper quartile.  So the semi-interquartile range $SIQ$ (half their difference) also has breakdown point 1/4. \\ 
+
+\hfil NHB \break
+
+\end{document}

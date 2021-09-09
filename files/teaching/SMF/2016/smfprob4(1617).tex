@@ -1,0 +1,77 @@
+%m2pm3prob3.tex 23.3.2008
+\documentclass{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\G{\Gamma}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\def\b{\beta}
+\def\e{\epsilon}
+\ni smfprob4(1617) \\
+\begin{center}
+{\bf SMF PROBLEMS 4.  9.2.2017}
+\end{center}
+
+\ni Q1.  Show that the regression (= least-squares) line for the data $(x_1,y_1), \ldots, (x_n,y_n)$ is
+$$
+y - \overline{y} = r_{xy}\frac{s_y}{s_x} (x - \overline{x}),
+$$
+with $r = r_{xy}$ the sample correlation coefficient, $s_x$, $s_y$ the sample standard deviations.\\
+
+\ni Q2.  With data $y$ and two predictor variables (regressors) $u$ and $v$, show that the regression (= least-squares) plane is $y - \overline{y} = a(u - \overline{u}) + b(v - \overline{v})$, where $a$, $b$ satisfy
+\begin{eqnarray*}
+a s_{uu} + b s_{uv} &=& s_{yu}, \\
+a s_{uv} + b s_{vv} &=& s_{yv}.
+\end{eqnarray*}
+
+\ni Q3.  Grain crops (wheat, barley etc.) are harvested in the summer.  Yields are much affected by the weather at harvest time, which is not predictable much in advance.  The two main predictors that are known months in advance are amounts of spring rainfall and spring sunshine, during the growing season.  Discuss the use of this in the markets for grain options and futures. \\
+
+\ni Q4.  In the regression model
+$$
+y = A \b + \e
+$$
+(data $y$ an $n$-vector, the design matrix $A$ an $n \times p$ matrix of constants, $\b$ a $p$-vector of parameters, $\e$ an $n$-vector of errors with independent $N(0,{\s}^2)$ components), show that the maximum-likelihood estimators, and also the least-squares estimators, are
+$$
+\hat \b = (A^T A)^{-1} A^T y.
+$$
+\i Show also that (in the notation of lectures)
+$$
+Py = A \hat \beta.
+$$
+
+\hfil NHB \break
+
+\end{document}
+
+\ni Q3. With ${\chi}^2(n)$ defined as the sum of $X_1^2 + \ldots + X_n^2$ with $x_i$ iid $N(0,1)$, show that ${\chi}^2(n)$ has \\
+(i) mean $n$ and variance $2n$; \\
+(ii) MGF $M(t) = 1/(1 - 2t)^{\half n}$ for $t < \half$; \\
+(iii) density
+$$
+f(x) = \frac{1}{2^{\half n} \Gamma(\half n)} x^{\half n - 1} \exp (- \half x) \qq (x > 0).
+$$
+
+\ni Q4.  With $A$ the design matrix and $P := A (A^T A)^{-1} A^T$, show that: \\
+(i) $P$ is a symmetric projection; \\
+(ii) $I - P$ is a symmetric projection; \\
+(iii) $tr(P) = p$ and $tr(I - P) = n-p$. \\
+
+
+\ni Q1.  Show that the regression (= least-squares) line for the data $(x_1,y_1), \ldots, (x_n,y_n)$ is
+$$
+y - \overline{y} = r_{xy}\frac{s_y}{s_x} (x - \overline{x}),
+$$
+with $r = r_{xy}$ the sample correlation coefficient, $s_x$, $s_y$ the sample standard deviations.\\
+
+\ni Q2.  With data $y$ and two predictor variables (regressors) $u$ and $v$, show that the regression (= least-squares) plane is $y - \overline{y} = a(u - \overline{u}) + b(v - \overline{v})$, where $a$, $b$ satisfy
+\begin{eqnarray*}
+a s_{uu} + b s_{uv} &=& s_{yu}, \\
+a s_{uv} + b s_{vv} &=& s_{yv}.
+\end{eqnarray*}
+
+
+
+\end{document} 

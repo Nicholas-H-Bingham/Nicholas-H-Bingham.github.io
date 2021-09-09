@@ -1,0 +1,90 @@
+%smfsoln9.tex 12.4.2012
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\ni smfsoln5(1617).tex \\
+\begin{center}
+{\bf SMF SOLUTIONS 5.  23.2.2017} \\
+\end{center}
+
+
+\ni Q1. (i) The roots ${\l}_1, \ldots, {\l}_p$ of the polynomial ${\l}^p - {\phi}_1 {\l}^{p-1} - \ldots - {\phi}_{p-1} \l - {\phi}_p$ should lie inside the unit disk. \\
+(ii) Multiply $(\ast)$ by $X_{t-k}$ for $k \geq 0$ and take expectations: $E[X_t] = 0$, and
+$$
+{\g}_k = cov(X_t, X_{t-k}) = E[X_t X_{t-k}] = {\phi}_1 E[X_{t-1} X_{t-k}] + \ldots + {\phi}_p E[X_{t-p} X_{t-k}] + E[{\epsilon}_t X_{t-k}].
+$$
+As ${\epsilon}_t$ has mean 0 and is independent of $X_{t-k}$, this gives
+$$
+{\g}_k = {\phi}_1 {\g}_{k-1} + \ldots + {\phi}_p {\g}_{k-p}.
+$$
+Divide by ${\g}_0$:
+$$
+{\rho}_k = {\phi}_1 {\rho}_{k-1} + \ldots + {\phi}_p {\rho}_{k-p}.
+$$
+(iii) General solution ${\rho}_k = c_1 {\l}_1^k + \ldots + c_p {\l}_p^k$, $c_i$ constants. \\
+
+\ni Q2. (i)
+$$
+{\g}_0 = var(X_0) = var(X_t) = E[X_t^2] = E[(\e + \t {\e}_{t-1})(\e + \t {\e}_{t-1})] = {\s}^2 (1 + {\t}^2),
+$$
+as $E[{\e}_t^2] = E[{\e}_{t-1}^2] = {\s}^2$, $E[{\e}_t {\e}_{t-1}] = 0$. \\
+(ii)
+$$
+{\g}_1 = E[X_t X_{t-1}] = E[({\e}_t + \t {\e}_{t-1})({\e}_{t-1} + \t {\e}_{t-2})] = {\s}^2 \t,
+$$
+$$
+{\g}_2 = E[X_t X_{t-2}] = E[({\e}_t + \t {\e}_{t-1})({\e}_{t-2} + \t {\e}_{t-3})] = 0,
+$$
+and similarly ${\g}_k = 0$ for $k \geq 2$. \\
+(iii) ${\rho}_k = {\g}_k/{\g}_0$.  So
+$$
+{\rho}_0 = 1, \qquad {\rho}_{\pm 1} = \t/(1 + {\t}^2), \qquad {\rho}_k = 0 \quad \hbox{otherwise}.
+$$
+
+\ni Q3. (i) $(X_t)$ is $ARMA(2,1)$. \\
+(ii) $X_t - X_{t-1} + \frac{1}{4} X_{t-2} = {\e}_t + \frac{1}{2}{\e}_{t-1}$; with $B$ the backward shift,
+
+$$
+\phi(B) X_t = \theta(B) {\e}_t,
+$$
+where $\phi(\l) = 1 - \l + \frac{1}{4} {\l}^2 = (1 - \frac{1}{2} \l)^2$, with a repeated root at $\l = 2$, \\
+\i $\theta(\l) = 1 + \frac{1}{2}\l$, root $\l = -2$. \\
+All roots are outside the unit disk in the complex $\l$-plane, so $(X_t)$ is stationary and invertible. \\
+
+\hfil NHB \break
+
+\end{document}

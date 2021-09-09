@@ -1,0 +1,75 @@
+%m2pm3l11.tex 7.2.2010 From Ingolf Becker's notes to Lectures 1-10, 2.2.2010.
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\G{\Gamma}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\ni m2pm3l10.tex \\
+
+\ni {\bf Lecture 11}. 4.2.2010.\\
+
+\ni 4. {\it Hyperbolic functions}\\
+    \[\begin{array}{rclrcl}
+    \cosh z&=&\frac{1}{2}(e^z+e^{-z}),&\frac{d}{dz}\cosh z&=&\sinh z,\\
+    \sinh z&=&\frac{1}{2}(e^z-e^{-z}),&\frac{d}{dz}\cosh z&=&\cosh z,\\
+    \tanh z&=&\frac{\sinh z}{\cosh z},&\cosh^2 z-\sinh^2 z&=&1.
+    \end{array}\]
+
+\ni 5. {\it Logarithms}\\
+\i Recall that in Real Analysis, log is the inverse function of
+$\exp$.
+    \[\log x=y \textrm{ means } e^y=x\]
+This extends to ${\bf C}$, as follows for $z,w\in {\bf C}$,
+    \[\log z=w \textrm{ means } e^w=z\]
+\emph{But:} $e^{2\pi i}=1$, so $e^{2\pi ki}=1\;\forall k\in {\bf Z}$. So if $e^w=z$, also
+$e^{w+2\pi k i}=z$. So if $\log z=w$, also $\log z=w+2\pi ki$: the log is \emph{not}
+single-valued, and is determined only to within additive multiples of $2\pi i$. In
+particular, $\log$ is not a \emph{function} as previously defined.\\
+\i There are three ways to proceed:\\
+(i) {\it Many-valued functions}.\\
+We can regard $\log$ as a \emph{many-valued function} (as with
+$\sin^{-1}=\arcsin$).\\
+(ii) {\it Cuts}.\\
+\emph{Cut} the complex plane ${\bf C}$ by removing (e.g.) the
+negative real axis.\\
+(iii) {\it Riemann surfaces}\\
+Think of $\log$, not going from ${\bf C}$ to ${\bf C}$, but from
+$R$ to ${\bf C}$, where $R$ is a doubly infinite stack of copies
+${\bf C}_k$ of ${\bf C}$, one for each $k\in{\bf Z}$, `spliced
+together' along their positive real axes so that
+$\theta\rightarrow\theta+2\pi$ takes one from ${\bf C}_k$ to ${\bf
+C }_{k+1}$. This is a \emph{Riemann surfaces} (G.F.B. RIEMANN
+(1926-66) in 1851; Felix KLEIN (1849-1925) in 1882).\\
+\i The origin O is a `point of bad behaviour' of $\log z$: a
+\emph{singularity} (see later) - a branch-point.
+\[\begin{array}{rrcl}
+\textrm{If }e^{w_i}=z_i \quad (i=1,2): & e^{w_1+w_2}&=&e^{w_1}e^{w_2}=z_1\cdot z_2,\\
+&w_1+w_2&=&\log(z_1\cdot z_2),\\
+&\log(z_1\cdot v_2)&=&\log z_1 + \log z_2,\\
+&\log\left(\frac{z_1}{z_2}\right)&=&\log z_1 - \log z_2.
+\end{array}\]
+\i Recall: in the real case, $y=\log x$ if $e^y=x$.
+Differentiating (implicitly) w.r.t. $x$: $e^y dy/dx=1$, $dy/dx=1/{e^y}=1/x$, $dy=dx/x$,
+$y=\int dx/x$.\\
+As $e^0=0$, $\log 1=0$: $y=\int_1^x du/u$; and $y=\log x$: $\log x =\int_1^x du/u$.\\
+Using complex differentiation (II.2), and complex integration (II.4), we can extend this to
+${\bf C}$, \emph{provided}:\\
+(i) We integrate along the \emph{line-segment} $[1,z]$ joining $1$ to $z$ in ${\bf C}$;\\
+(ii) $[1,z]$ \emph{avoids} the singularity $z=0$ (\emph{branch-point}).\\
+So in ${\bf C}$, $\log z=\int_1^z dw/w$ or
+$\int_{[1,z]} dw/w$ works, \emph{provided} that $z$ does
+not lie on the negative real line or O, i.e. \emph{provided} that
+we work with the \emph{cut} plane. For details, see Exam, 2009, Q2.\\
+
+\ni 6. {\it Complex Powers}\\
+Recall in the real case, $a^x=e^{x\log a}$. In the complex case,
+$\log w$ is many-valued, so $w^z$ is many valued.
+
+\end{document}

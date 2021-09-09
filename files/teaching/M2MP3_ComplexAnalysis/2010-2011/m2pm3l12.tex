@@ -1,0 +1,111 @@
+%m2pm3l12.tex 7.2.2010 From Ingolf Becker's notes to Lectures 1-10, 2.2.2010.
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\G{\Gamma}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\ni m2pm3l12.tex \\
+
+\ni {\bf Lecture 12}.  5.2.2010.\\
+
+\ni {\bf 2.  Complex Differentiation and the Cauchy-Riemann
+Equations}\\
+
+\ni {\it Defn}.  We say $f:{\bf C} \rightarrow {\bf C}$ is
+\emph{differentiable at} $z_0$ with \emph{derivative} $w$, and write $f^{'}(z_0)=w$, if
+$$
+\frac{f(z)-f(z_0)}{z-z_0}\rightarrow w \hbox{ as } z\rightarrow z_0: \qquad
+f^{'}(z_o)=\lim_{z\rightarrow z_0}\frac{f(z)-f(z_0)}{z-z_0}.
+$$
+\i The point $z_0$ is that $z$ may tend to $z_0$ in ANY way --
+i.e., from ANY direction; the limit has to be the same for all
+ways of approach. So,
+$$
+\forall\epsilon >0, \exists\delta
+>0 \hbox { s.t. } \forall z \hbox{ with } |z-z_0|<\delta,
+\left|\frac{f(z)-f(z_0)}{z-z_0}-f^{'}(z_0)\right|<\epsilon
+$$
+($arg(z-z_0)$ can be anything!). Write $z-z_0=h=k+il$ ($k$, $l$
+real), $f=u+iv$ ($u$, $v$ real): $f(z)=u(x,y)+iv(x,y)$.\\
+1. {h real ($l=0$)}.\\
+\[\frac{u(x_0+k,y_0)-u(x_0,y_0)}{k}+i\frac{v(x_0+k,y_0)-v(x_0,y_0)}{k}\rightarrow f^{'}(z_0)
+\quad (k\rightarrow 0):\]
+\[u_x(x_0,y_0)+iv_x(x_0,y_0)=f^{'}(z_0),\quad\textrm{writing $u_x$ for }{\partial u}/
+{\partial x}.\]
+2. {h imaginary ($k=0$)}.\\
+\[\frac{u(x_0,y_0+l)-u(x_0,y_0)}{l}+i\frac{v(x_0,y_0+l)-v(x_0,y_0)}{il}\rightarrow f^{'}
+(z_0)\quad (l\rightarrow 0):\]
+\[-iu_y(x_0,y_0)+v_y(x_0,y_0)=f^{'}(z_0),\quad\textrm{writing $u_y$ for }
+{\partial u}/{\partial y}.\]
+Combining, at $(x_0,y_0)$
+\[u_x=v_y,\quad v_x=-u_y\]
+These are called the Cauchy-Riemann Equations, C-R.\\
+So differentiability at $(x_0,y_0)\Rightarrow$ C-R at $(x_0,y_0)$:
+C-R are \emph{necessary} for differentiability. They are \emph{not
+sufficient}. \\
+{\it Example}. $f(z)=\sqrt{|xy|}\;(z=x+iy=re^{i\theta})$. So
+$f,u,v\equiv 0$ on both axes. So $u_x,u_y,v_x,v_y\equiv 0$ on both
+axes and C-R holds at $(0,0)$. But:
+\[\frac{f(z)-f(0)}{z-0}=\frac{\sqrt{|r\cos\theta\cdot r\sin\theta|}}{re^{i\theta}}
+=e^{-i\theta}\sqrt{|\cos\theta\sin\theta|}\]
+RHS depends on $\theta$, i.e. \emph{how} $z=re^{i\theta} \to 0$: $f$ is \emph{not}
+differentiable at $0$.\\
+But there is a \emph{partial} converse:\\
+
+\ni {\bf Theorem}.  If $f=u+iv$ and the partial derivatives
+$u_x,u_y,v_x,v_y$ exist \emph{and are continuous} in a
+neighbourhood of $z_0$, and satisfy the C-R equations at $z_0$,
+then $f$ is dfferentiable at $z_0$.\\
+
+\ni {\it Proof}. Take $h=k+i\ell$ so small that $z=z_0+k$ is in
+the neighbourhood where partials are continuous; then
+\[u(x_0+k,y_0+\ell)-u(x_0,y_0)=[u(x_0+k,y_0+\ell)-u(x_0,y_0+\ell)]
++[u(x_0,y_0+\ell)-u(x_0,y_0)]. \]
+By the Mean Value Theorem (MVT):
+\[\begin{array}{rcl}
+[u(x_0+k,y_0+\ell)-u(x_0,y_0+\ell)]/k &=&u_x(x_0+\theta k,y_0+\ell)\\
+&=&u_x(x_0,y_0)+o(1)\quad \textrm{as }h\rightarrow 0.
+\end{array}\]
+(here we use the $o$-notation for the error term:`$o(1)$ as
+$h\rightarrow 0$' means `$\rightarrow 0$ as $h\rightarrow 0$'), by
+continuity of the partial $u_x$. Similarly,
+\[\begin{array}{rcll}
+[u(x_0,y_0+\ell)-u(x_0,y_0)]/\ell &=&u_y(x_0,y_0+\theta^{'}\ell)&\textrm{for some }
+\theta^{'}\in(0,1)\\
+&=&u_y(x_0,y_0)+o(1)& \textrm{as }h\rightarrow 0.
+\end{array}\]
+Combining:
+\[u(x_0+k,y_0+\ell)-u(x_0,y_0)=ku_x(x_0,y_0)+\ell u_y(x_0,y_0)+o(h),\]
+where `$o(h)$' means `smaller order of magnitude then $h$ as
+$h\rightarrow0$.' This combines two error terms, $o(k)$ and
+$o(l)$, both $o(h)$ as $h^2=k^2+l^2$, $|k|\leq|h|$, $|l|\leq|h|$.
+Similarly,
+\[v(x_0+k,y_0+\ell)-v(x_0,y_0)=kv_x(x_0,y_0)+\ell v_y(x_0,y_0)+o(h)\].
+So
+\[\begin{array}{rcll}
+f(z_0+h)-f(z_0)
+&=&[u(x_0+k,y_0+\ell)-u(x_0,y_0)]+i[v(x_0+k,y_0+\ell)-v(x_0,y_0)]\\
+&=&ku_x+{\ell u_y}+ikv_x+{i\ell v_y}+o(h).
+\end{array}\]
+Replace $u_y$, $v_y$ on RHS by $-v_x$, $u_x$, using the C-R equations.  The RHS becomes
+$$
+(k+i\ell)u_x+i(k+i\ell)v_x+o(h)\quad\textrm{by C-R} = h(u_x+iv_x)+o(h).
+$$
+Divide by h:
+\[\begin{array}{rcll}
+{f(z_0+h)-f(z_0)}/h&=&u_x(x_0,y_0)+iv_x(x_0,y_0)+o(1)\\
+&\rightarrow&u_x(x_0,y_0)+iv_x(x_0,y_0)&\textrm{ as }h\rightarrow
+0.
+\end{array}\]
+So $f^{'}(z_0)$ exists and $=u_x(x_0,y_0)+iv_x(x_0,y_0)$. // \\
+
+\ni {\it Note}. There are \emph{three} other ways to write the RHS in the equation above.
+
+\end{document}

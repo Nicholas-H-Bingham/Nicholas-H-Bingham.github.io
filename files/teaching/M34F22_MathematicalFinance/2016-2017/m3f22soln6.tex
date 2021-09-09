@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33soln6 \\
+\begin{center}
+{\bf M3F22 SOLUTIONS 6.  24.11.2017} 
+\end{center}
+
+\ni Q1 {\it Doubling strategy}.  (i) With $N$ the number of losses before the first win:
+$$
+P(N = k) = P(L, L, \cdots, L (k \hbox{ times}), W) =(\half)^k.\half = (\half)^{k+1}.
+$$
+That is, $N$ is geometrically distributed with parameter 1/2. As
+$$
+\sum_{k=0}^{\infty} P(N = k) = \sum_0^{\infty} (\half)^{k+1} = \half/(1 - \half) = 1,
+$$
+$P(N < \infty) = 1$: $N < \infty$ a.s.  So one is certain to win eventually. \\
+(ii) Let $S_n$ be one's fortune at time $n$.  When $N = k$, one has losses at trials $1, 2, 3, \ldots, k$, with losses $1,2, 4, \ldots, 2^{k-1}$, followed by a win at trial $k+1$ (of $2^k$).  So one's fortune then is
+$$
+2^k - (1 + 2 + 2^2 + \ldots + 2^{k-1}) = 2^k - (2^k - 1) = 1,
+$$
+summing the finite geometric progression.  So one's eventual fortune is +1 (which, by (i), one is certain to win eventually). \\
+(iii) $N$ has PGF
+$$
+P(s)
+:= E[s^N]
+= \sum_{n=0}^{\infty} s^k P(N = k)
+= \sum_0^{\infty} s^k.(\half)^{k+1}
+$$
+$$
+= \half \sum_0^{\infty} (\half s)^k = \half/(1 - \half s) = 1/(2 - s):
+$$
+$$
+P'(s) = E[N s^{N-1}] = (2 - s)^{-2}; \qquad P'(1) = E[N] = 1.
+$$
+So the mean time the game lasts is 1. \\
+(iv) As with the simple random walk (Q2 below): this is an impossible strategy to use in reality, for two reasons: \\
+(a) It depends on one's opponent's cooperation.  What is to stop him trying this on you?  If he does, the game degenerates into a simple coin toss, with the winner walking away with a profit of 1 (pound, or million pounds, say) -- suicidally risky. \\
+(b) Even with a cooperative opponent, it relies on the gambler having an unlimited amount of cash to bet with, or an unlimited line of credit -- both hopelesly unrealistic in practice. \\
+
+\ni Q2 {\it First-passage time for simple random walk (SRW)}. \\
+\i Let $F(s) := s^T = \sum_1^{\infty} P(T = n) s^n = \sum_1^{\infty} f_n s^n$ be the PGF of $T$ ($= T_1$, the first passage time to 1).  Since the first-passage time $T_2$ to 2 is the sum of the first-passage times from 0 to 1 (PGF $F$) and from 1 to 2 (PGF $F$ again), and these are independent (they involve disjoint blocks of independent tosses), $T_2$ has PGF $F_2(s) := E[s^{T_2}] = F(s)^2$. \\
+\i Condition on the outcome $X_1$ of the first toss.  If this is head (+1), $T_1 = 1$.  If it is a tail ($-1$), $T = 1 + U$, where $U$, the first-passage time from $-1$ to 1, has PGF $F_2(s) = F(s)^2$ as above.  So
+$$
+F(s) := E[s^T]
+= E[s^T | X_1 = +1] P(X_1 = +1) + E[s^T | X_1 = -1] P(X_1 = -1)
+$$
+$$
+= \half.s + \half.s F(s)^2
+$$
+(as $1$ has PGF $s$).  So $F$ satisfies the quadratic
+$$
+\half s F(s)^2 - F(s) + \half s = 0. \qquad \hbox{So} \qquad F(s) = \frac{1 \pm \sqrt{1 - s^2}}{s}.
+$$
+We need to take the $-$ sign here (as $F(s)$ contains no $s^{-1}$ term):
+$$
+F(s) = \frac{1 - \sqrt{1 - s^2}}{s}.
+$$
+(i) Put $s = 1$: $F(1) = 1$, so $\sum_1^{\infty} P(T = n) = 1$, so $T < \infty$ a.s. \\
+(ii)
+$$
+F'(s) = - \frac{1}{s^2} + \frac{\sqrt{1 - s^2}}{s} - \frac{1}{s}.\frac{\half (-2s)}{\sqrt{1 - s^2}}
+= - \frac{1}{s^2} + \frac{\sqrt{1 - s^2}}{s} + \frac{1}{\sqrt{1 - s^2}}.
+$$
+So $F'(1) = E[T] = + \infty$. \\
+(iii) In particular, $P(T = n) > 0$ for infinitely many $n$ (indeed, for all odd $n$).  So no bound can be put on our maximum net loss before we realise our eventual gain. \\
+\i This strategy is even more unrealistic than that in Q1: it has all the disadvantages there, plus another -- infinite mean waiting time. \\
+
+\hfil NHB \break
+
+
+\end{document}

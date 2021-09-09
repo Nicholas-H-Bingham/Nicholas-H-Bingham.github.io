@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33soln5 \\
+\begin{center}
+{\bf M3F22 SOLUTIONS 5.  17.11.2017} 
+\end{center}
+\ni Q1: {\it Pricing}.  Mathematically, Q1 is the same as the US dollars/Swiss francs example in I.8 [L5].  We proceed as there. \\
+\i With $H$ the payoff of the call option $C$ in a year's time:  $H$ is 50 if the gold price goes up, 0 if it goes down. \\
+\i We determine the risk-neutral probability $p^{\ast}$ so as to make the option a fair game [martingale]:
+$$
+1,150 = p^{\ast}.1,200 + (1 - p^{\ast}).1,050 = 150 p^{\ast} + 1,050: \quad 100 = 150 p^{\ast}: \quad p^{\ast} = 2/3.
+$$
+The value of the option at time 0 is
+$$
+V_0 = E^{\ast} [H] = p^{\ast}.50 + (1 - p^{\ast}).0 = 50.p^{\ast} = 50.2/3 = 33.33.
+$$
+
+\ni Q2: {\it Hedging}.  We are given that the call $C$ is financially equivalent to a portfolio $\Pi$ consisting of a combination of cash and stock [gold]: this is because the binomial model is {\it complete} -- all contingent claims (options etc.) can be {\it replicated} in this way.  See IV.3 [L16]. \\
+\i To find {\it which} combination $({\phi}_0, {\phi}_1)$ of cash and gold, we need to solve two simultaneous linear equations, one for the `up' state and one for the `down' state:
+\begin{eqnarray*}
+50 = {\phi}_0 + 1200 {\phi}_1, \\
+0 = {\phi}_0 + 1050 {\phi}_1.
+\end{eqnarray*}
+Subtract: $50 = 150 {\phi}_1$: ${\phi}_1 = 1/3$. \\
+Substitute: $50 = {\phi}_0 + 400$: ${\phi}_0 = -350$. \\
+So the option is equivalent to the portfolio $\Pi = (-350, 1/3)$: {\it long}, 1/3 oz. gold, {\it short}, 350 (\$).\\
+Check: in a year's time, \\
+Gold up: $\Pi$ is worth (1/3).1200 - 350 = 400 - 350 = 50, as $H$ is; \\
+Gold down: $\Pi$ is worth (1/3).1050 - 350 = 350 - 350 = 0, as $H$ is. \\
+
+\ni Q3: {\it Arbitrage}.  By Q1 and Q2, you know $C$ and $\Pi$ are worth 33.33 now. \\
+(i) If you see $C$ being traded (= bought and sold) for {\it more} than it is worth, {\it sell} it, for 40.  You can buy it, or equivalently the hedging portfolio $\Pi$, for 33.33.  Pocket the risk-free profit 6.67 now.  The hedge enables you to meet your obligations to the option holder, at zero cost. \\
+(ii) If you see $C$ being traded for {\it less} than it is worth, {\it buy} it, for 20.  You can sell it, equivalently $\Pi$, for 33.33.  Pocket the risk-free profit 13.33 now.  Again, the hedge enables you to meet your obligations to the option holder, at zero cost. \\
+
+\i Of course, this is `free money', so we should do it again, and keep doing it for as long as this arbitrage opportunity presents itself.  No individual or institution can or will withstand being used as a `money-pump' in this way by you, and the other market participants who will do likewise, indefinitely.  So they will withdraw from the market, or be driven from it: arbitrage opportunities are transient.  That is why assuming {\it no arbitrage (NA)}, our standing assumption (IV.2 L15), is reasonable to a first approximation. \\
+
+\ni Q5. {\it Two-period binary model: Exam 2016-17, Q2}. \\
+\ni (i) {\it Martingale probability}. \\
+\i We determine the risk-neutral probability $p^{\ast}$ so as to make the option a fair game [martingale]: with $S_0$ the initial price,
+$$
+S_0 = p^{\ast}S_0.5/4 + (1 - p^{\ast}) S_0.4/5: \
+1 = \frac{4}{5} + p^{\ast} (\frac{5}{4} - \frac{4}{5}): \
+\frac{1}{5} = p^{\ast}.\frac{9}{20}: \
+p^{\ast} = \frac{4}{9}.                                                  
+$$
+\ni (ii) {\it Pricing}.  The time-2 stock prices $S_2$ are $S_0 (5/4)^2$ ($uu$), $S_0$ ($ud$), $S_0.(4/5)^2$ ($dd$); payoffs (values) $V_2 = [S_2 - 8]_+$, which with $S_0 = 8$ are $9/2$ ($uu$), 0 ($ud$, $dd$). 
+\i Work down the tree (as usual).  The value $V_1$ at the two time-1 nodes are: \\
+$$
+u-\hbox{node}: \qquad  p^{\ast}.\frac{9}{2} + (1 - p^{\ast}).0 = \frac{4}{9}.\frac{9}{2} = 2; 
+\qquad d-\hbox{node}: \qquad 0.                                         
+$$ 
+The value of the option at time 0 is
+$$
+V_0 = p^{\ast}.V_1(u) + (1 - p^{\ast}).V_1(d) = \frac{4}{9}.2 = \frac{8}{9}. 
+$$
+\ni (iii) {\it Hedging}. \\
+\i Work up the tree (as given).  From each node, the option is equivalent to ${\p}_0$ cash and ${\p}_1$ stock; the hedging portfolio is $H = ({\p}_0, {\p}_1)$. \\
+Time 0. 
+$$
+u: \qquad {\p}_0 + {\p}_1.8.\frac{5}{4} = 2, \qquad
+d: \qquad {\p}_0 + {\p}_1.8.\frac{4}{5} = 0.
+$$
+Subtract: 
+$$
+{\p}_1.8.(\frac{5}{4} - \frac{4}{5}) = 2; \quad {\p}_1.4.\frac{9}{20} = 1; \quad {\p}_1 = \frac{5}{9};
+$$
+$$
+{\p}_0 
+= - {\p}_1.8.\frac{4}{5} 
+= - \frac{5}{9}.\frac{32}{5} 
+= - \frac{32}{9}: \ H = (- \frac{32}{9}, \frac{5}{9}): \ 
+\hbox{short 32/9 cash, long 5/9 stock}.                                 
+$$
+Time 1, $d$ node: option worthless; $H = (0,0)$.  \\
+Time 1, $u$ node: stock up to 10, so (for the second time-period)
+$$
+u: \qquad {\p}_0 + {\p}_1.10.\frac{5}{4} = \frac{9}{2}, \qquad
+d: \qquad {\p}_0 + {\p}_1.10.\frac{4}{5} = 0.
+$$
+Subtract: 
+$$
+{\p}_1.10.(\frac{5}{4} - \frac{4}{5}) = \frac{9}{2}; \quad {\p}_1.10.\frac{9}{20} = \frac{9}{2}; \quad 
+{\p}_1 = 1;
+$$
+$$
+{\p}_0 = - {\p}_1.8. = -8: \quad 
+H = (- 8, 1): \quad \hbox{short 8 cash, long 1 stock}.                  
+$$
+\hfil NHB \break
+
+\end{document}

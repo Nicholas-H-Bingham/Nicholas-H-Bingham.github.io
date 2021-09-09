@@ -1,0 +1,117 @@
+%smfsoln6.tex 12.4.2012
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\q{\quad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\ni smfsoln7(1617).tex \\
+\begin{center}
+{\bf SMF SOLUTIONS 7.  2.3.2017} \\
+\end{center}
+
+\ni Q1. (i) With $X$ the number of successes, and as the prior in $p$ is uniform,
+$$
+P(X = x|p) = {n \choose x} p^x (1-p)^{n-x}, \qquad
+P(X = x) = \int_0^1 {n \choose x} p^x (1-p)^{n-x} dp:
+$$
+$$
+P(a < p < b|X = x) = \int_a^b {n \choose x} p^x (1-p)^{n-x} dp/\int_0^1 {n \choose x} p^x (1-p)^{n-x} dp
+$$
+$$
+= \int_a^b {n \choose x} p^x (1-p)^{n-x} dp/B(x+1, n-x+1).
+$$
+So the posterior is $B(x+1, n-x+1)$. \\
+(ii) If the prior is now $B(\a, \b)$, as in (i)
+$$
+P(a < p < b|X = x) \propto \int_a^b {n \choose x} p^x (1-p)^{n-x}. p^{\a - 1} (1-p)^{\b - 1} dp
+$$
+$$
+= \int_a^b {n \choose x} p^{x + \a - 1} (1-p)^{n-x + \b -1} dp.
+$$
+So the posterior is $B(x+\a, n-x+\b)$ (observe that $U(0,1) = B(1,1)$, so (i) is the case $\a = \b = 1$). \\
+
+\ni Q2. (i) For the Bernoulli distribution $B(p)$, $f(x;p) = p^x (1-p)^{1-x}$,
+$$
+\ell = x \log p + (1-x) \log (1-p), \q
+{\ell}' = \frac{x}{p} - \frac{1-x}{1-p},
+\q
+{\ell}'' = - \frac{x}{p^2} - \frac{1-x}{(1-p)^2},
+$$
+$$
+I(p) = - E[{\ell}''] = \frac{(1-p)}{(1-p)^2} + \frac{p}{p^2} = \frac{1}{p} + \frac{1}{1-p} = \frac{1}{p(1-p)}.
+$$
+(ii) So the Jeffreys prior is $\pi(p) \propto \sqrt{I(p)} = 1/\sqrt{p(1-p)}$.
+This is the Beta distribution $B(\half, \half)$, and $B(\half, \half) = \G(\half).\G(\half)/\G(1) = \pi$, as $\G(\half) = \sqrt{\pi}$.  So the Jeffreys prior is the {\it arc-sine law}:
+$$
+\pi(x) = \frac{1}{\pi \sqrt{x(1-x)}} \qquad (x \in [0,1]).
+$$
+%It is important in, e.g., fluctuations in coin-tossing.  See e.g. W. FELLER, {\sl An introduction to probability theory and its applications}, Vol. 1, 3rd ed., Wiley, 1968, Ch. III. \\
+
+\ni Q3. Recall $\G(z+1) = z \G(z)$.  $B(\a, \b)$ has mean
+$$
+E[X] = \int_0^1 x.x^{\a - 1} (1-x)^{\b - 1} dx/B(\a, \b) = \int_0^1 x^{\a} (1-x)^{\b - 1} dx/B(\a, \b)
+$$
+$$
+= B(\a + 1,\b)/B(\a, \b) = \frac{\G(\a + 1)\G(\b)}{\G(\a + \b)}/\frac{\G(\a)\G(\b)}{\G(\a + \b)}.
+= \a /(\a + \b),
+$$
+\\
+\ni Q4.  So the posterior mean in Q1(ii) is $(x + \a)/(n + \a + \b)$.  As the amount of data increases, $n \to \infty$, and by SLLN $x/n \to p$ a.s., where $p$ is the true parameter value.  With no data, $x = n = 0$, and the mean is the prior mean $\a/(\a + \b)$.  The value above is a compromise between these two. \\
+
+\ni Q5.
+$$
+(f_{\a} \ast f_{\b})(x) = \frac{1}{\G(\a) \G(\b)} \int_0^x y^{\a - 1} e^{- y}.(x-y)^{\b - 1} e^{-(x-y)} dy
+$$
+$$
+= \frac{1}{\G(\a) \G(\b)}.e^{-x} \int_0^x y^{\a - 1}(x-y)^{\b - 1} dy.
+$$
+In the integral, $I$ say, substitute $y = xu$.  Then \\
+$I = x^{\a + \b - 1} \int_0^1 u^{\a - 1} (1-u)^{\b - 1} du = x^{\a + \b - 1} B(\a, \b)$.  Combining, the RHS has the form of $f_{\a + \b}(x)$ (to within constants!):
+$$
+(f_{\a} \ast f_{\b})(x) = \frac{\G(\a + \b)}{\G(\a)\G(\b)}.B(\a,\b) f_{\a + \b}(x).
+$$
+As both sides are densities, both integrate to 1.  So the constant on the RHS is 1, which gives Euler's integral for the Beta function. \\
+\ni {\it Note}.  It is remarkable that this purely probabilistic argument (convolutions of Gamma densities) yields a purely analytic result (Euler's integral for the Beta function). \\
+
+\ni Q6. (i) The likelihood is $L = \prod_1^n {\t}^{-1} I(x_i \in (0,\t)) = {\t}^{-n} I(\t > \max)$, $\max := \max (x_1, \ldots, x_n)$.
+To maximise this, one minimises $\t$, subject to the constraint $\t > \max$.  So the MLE is $\hat{\t} = \max$. \\
+(ii) By Fisher-Neyman, for each $n$ $\max(x_1, \ldots, x_n)$ is a sufficient statistic. \\
+(iii) Posterior is proportional to prior times likelihood, so
+$$
+f(\t|x_1, \ldots, x_n) \propto \l e^{-\l \t}.{\t}^{-n} \qquad (\t > \max (x_1, \ldots, x_n). \eqno \hbox{NHB}
+$$
+
+\end{document}

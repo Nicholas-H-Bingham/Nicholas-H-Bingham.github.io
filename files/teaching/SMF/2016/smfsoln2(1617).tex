@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\T{\mathbb{T}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\De{\Delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\L{\Lambda}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+%\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+%\def\S{\cal S}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\th{\theta}
+\def\Th{\Theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\q{\quad}
+\def\qq{\qquad}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\def\half{\frac{1}{2}}
+\def\pa{\partial}
+\def\r{\rho}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\ni smfsoln2(1617)\\
+\begin{center}
+{\bf SMF SOLUTIONS 2. 2.2.2017}
+\end{center}
+
+\ni Q1.  (i) Consider
+$$
+Q(\l) := \int (\l f + g)^2 = {\l}^2 \int f^2 + 2 \l \int fg + \int g^2.
+$$
+This is always non-negative, so its discriminant is $\leq 0$ (if it were $> 0$, there would be two distinct real roots with a sign change between them).  So ("$b^2 - 4ac \leq 0$")
+$$
+(\int fg)^2 \leq \int f^2 \int g^2.
+$$
+Equality holds iff $Q$ has a double root, ${\l}_0$ say.  Then
+$$
+Q({\l}_0) = \int ({\l}_0 f + g)^2 = 0.
+$$
+This forces
+$$
+{\l}_0 f + g = 0
+$$
+(a.e.), the required linear relation. \\
+(ii) We apply this to $X - E[X]$, $Y - E[Y]$, we find equality in CR iff a linear relation of the form $a(X - E[X]) + b(Y - E[Y]) = 0$ holds.  Taking $X = {\ell}'$ (recall $E[{\ell}'] = 0$), $Y = u$ (recall $EY = \t$ as $u$ is unbiased for $\t$), we find
+$$
+u - \t = a {\ell}'
+$$
+for some $a$ (so $b = \t$). \\
+(iii) So
+$$
+{\ell}' = u/a(\t) - \t/a(\t): \qquad \ell = u \int d\t/a(\t) - \int \t d\t/a(\t) + k({\bf X}):
+$$
+$$
+L(\t; {\bf X}) = \exp \{ \a(\t) u({\bf X}) + \b(\t) + k({\bf X}) \}.
+$$
+(iv) By Fisher-Neyman, this shows $u$ is sufficient for $\t$; by Lehmann-Scheff\'e, this shows $u$ is minimal sufficient for $\t$. \\
+
+\ni Q2.
+$$
+\ell = -n \log 2 - \sum |x_i - \t|.
+$$
+To maximise this -- i.e. minimise $\sum |x_i - \t|$ -- draw a graph.  From this, the sum is minimised by $\t = Med$, and increases linearly on either side of the sample median.  So the MLE is
+$\hat{\m} = Med$. \\
+(ii) With one reading, as above, $\ell$ decreases with slope -1 to the right of $Med$, slope +1 to the left of $Med$.  So $({\ell}')^2 = 1$ (except at $\l = Med$, where the derivative is not defined -- but we are going to integrate, and so can neglect null sets, let alone single points, so this does not matter).  So $I = \int (\partial \log f/\partial \t)^2 f = \int f = 1$, as $f$ is a
+density.  So the CR bound is $1/n$. \\
+\i  We are given that $Med$ is asymptotically normal, and that its mean is $med = \t$, so $Med$ is asymptotically unbiased. By symmetry, the population median is $med = \t$, where the density is $\half$.  So $4 f(med)^2 = 1$, and the asymptotic variance of the sample median is $1/n$, the CR bound, so $Med$ is also asymptotically efficient.\\
+
+\ni Q3. (i)
+$$
+f(x; \m) = \frac{1}{\pi(1 + (x - \m)^2)}, \qquad \ell = \log f = c - \log[1 + (x - \m)^2],
+$$
+$$
+{\ell}' = \frac{2(x - \m)}{1 + (x - \m)^2}, \qquad {\ell}'({\bf x}; \t) = 2 \sum_1^n \frac{(x_i - \m)}{1 + (x_i - \m)^2}.
+$$
+But (Q1) we have efficiency iff ${\ell}'$ factorises in the form ${\ell}'({\bf x}; \t) = A(\t) (u({\bf x}) - \t)$.  The likelihood here does not factorise, so there is no efficient estimator. \\
+(ii) The information per reading is
+$$
+E[({\ell}')^2] = \int (\partial f/\partial \m)^2 f
+= \frac{4}{\pi} \int \frac{(x - \m)^2}{[1 + (x - \m)^2]^3} dx
+= \frac{4}{\pi} \int \frac{x^2}{[1 + x^2]^3} dx = \frac{4}{\pi} I,
+$$
+say.  One can evaluate $I$ by Complex Analysis ($f(z) := z^2/[1 + z^2]^3$, round the contour $\Gamma$ -- semicircle in the upper half-plane on base $[-R,R]$; $f$ has a triple pole inside $\Gamma$ of residue $-i/16$, so $I = 2 \pi i \ Res = \pi/8$), giving the information per reading as $\half$.  So the information in a sample of size $n$ is $n/2$, and the MLE has asymptotic variance $2/n$.  As in Q2, the sample median has asymptotic variance ${\pi}^2/4n$.  So the asymptotic efficiency is their ratio, $8/{\pi}^2 \sim 81 \%$.  \hfil NHB \break
+
+
+
+\end{document} 

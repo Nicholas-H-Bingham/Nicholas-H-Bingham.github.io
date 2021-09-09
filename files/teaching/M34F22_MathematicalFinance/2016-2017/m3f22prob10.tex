@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33prob1 \\
+\begin{center}
+{\bf M3F22 PROBLEMS 10.  15.11.2017} 
+\end{center}
+
+\ni Q1.  {\it Exponential distributions and renewal}. \\
+(i) For the exponential law $E(\l)$ with parameter $\l > 0$ (density $f(x) = \l e^{-\l x}$ for $x > 0$, 0 otherwise), show that the renewal function is
+$$
+U(x) = 1 + \l x.
+$$
+Interpret the two terms in this result. \\
+(ii) Show that this agrees with the renewal theorem, Blackwell's renewal theorem  and the key renewal theorem in the $E(\l)$ case. \\
+
+\ni Q1.  {\it Gamma distributions and Renewal}. \\
+\i For $\a, \l > 0$, the Gamma distribution $\G(\a, \l)$ is defined by
+$$
+f(x) := \frac{{\l}^{\a} e^{-\l x} x^{\a - 1}}{\G(\a)} \quad (x > 0).
+$$
+Show tha: \\
+(i) this is a density; \\
+(ii) the mean is $\mu = \a/\l$; \\
+(iii) the LST of $f$ is
+$$
+\hat f(s) = \Bigl( \frac{\l}{\l + s} \Bigr)^{\a};
+$$
+(iv) the LST of the renewal function $U(x)$ is
+$$
+\hat U(s) = \frac{(\l + s)^{\a}}{{\l}^{\a}[(1 + s/\l)^{\a} - 1]};
+$$
+(v)
+$$\hat U(s) \sim \frac{1}{\mu s}\qquad (s \downarrow 0).
+$$
+(vi) Deduce that the Renewal Theorem holds here:
+$$
+U(x) \sim x/\mu \qquad (x \to \infty).
+$$
+You may quote (Hardy-Littlewood-Karamata Tauberian theorem, HLK) that for $\rho \geq 0$,
+$$
+U(x) \sim c x^{\rho}/\G(1+\rho) \quad (x \to \infty) \ \Leftrightarrow \ \hat U(s) \sim c/s^{\rho} \quad (s \downarrow 0).
+$$
+\hfil NHB \break
+
+\end{document}

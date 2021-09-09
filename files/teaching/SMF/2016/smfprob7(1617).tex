@@ -1,0 +1,76 @@
+%smfprob6.tex 12.4.2012 Was smfprob3.tex 23.12.2010
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\q{\quad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\ni smfprob7(1617).tex \\
+\begin{center}
+{\bf SMF PROBLEMS 7.  2.3.2017} \\
+\end{center}
+
+\ni Q1. (i) For a Bernoulli distribution $B(p)$ with uniform prior on $p \in [0,1]$, show that the posterior distribution is a Beta distribution, and find the parameters. \\
+(ii)  Repeat with a Beta prior $B(\a, \b)$. \\
+
+\ni Q2. For the Bernoulli distribution $B(p)$, find \\
+(i) the information per reading; \\
+(ii) the Jeffreys prior. \\
+
+\ni Q3.  Find the mean of $B(\a, \b)$. \\
+
+\ni Q4.  Hence find the posterior mean in Q1(ii), and interpret this as the sample size $n$ increases. \\
+
+\ni Q5 ({\it Convolutions of Gammas and Euler's integral for the Beta function}).  Write $f_{\a}$ for the exponential density with parameter ${\a}$:
+$$
+f_{\a}(x) = x^{\a - 1} e^{-x}/\G(\a) \qquad (x > 0).
+$$
+(i) Show that
+$$f_{\a} \ast f_{\b} = f_{\a + \b}.
+$$
+(ii)  Deduce Euler's integral for the Beta function:
+$$
+B(\a, \b) := \int_0^1 x^{\a - 1} (1-x)^{\b - 1} dx = \frac{\G(\a) \G(\b)}{\G(\a + \b)}.
+$$
+
+\ni Q6.  For the shifted exponential distribution with parameter $\t > 0$ (density $e^{-(x-\t)}$ for $x > \t$), \\
+(i) find the MLE; \\
+(ii) find for each $n$ a sufficient statistic; \\
+(iii) if $\t$ has prior density $\l e^{-\l \t}$ ($\t \sim E(\l)$), find the posterior density to within a multiplicative constant.\\
+
+\hfil NHB \break
+
+\end{document}
+

@@ -1,0 +1,263 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33soln4 \\
+\begin{center}
+{\bf M3F22 SOLUTIONS 4.  10.11.2017} 
+\end{center}
+
+\ni Q1.  Since $f$ is clearly non-negative, to show that $f$ is a (probability
+density) function (in two dimensions), it suffices to show that
+$f$ integrates to 1:
+\[
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) dx dy = 1,
+\qquad \hbox{or} \qquad \int \int f = 1.
+\]
+Write
+\[
+f_1(x) := \int_{-\infty}^{\infty} f(x,y) dy, \qquad f_2(y) :=
+\int_{-\infty}^{\infty} f(x,y) dx.
+\]
+Then to show $\int \int f = 1$, we need to show
+$\int_{-\infty}^{\infty} f_1(x) dx = 1$ (or
+$\int_{-\infty}^{\infty}f_2(y) dy = 1$).  Then $f_1$, $f_2$ are
+densities, in {\it one} dimension. If $f(x,y) = f_{X,Y}(x,y)$ is
+the {\it joint} density of {\it two} random variables $X$, $Y$,
+then $f_1(x)$ is the density $f_X(x)$ of $X$, $f_2(y)$ the density
+$f_Y(y)$ of $Y$ ($f_1, f_2$, or $f_X, f_Y$, are called the {\it
+marginal}\index{Marginal density} densities of the {\it joint}
+density\index{Joint density} $f$, or $f_{X,Y}$).
+
+To perform the integrations, we have to {\it complete the square}: 
+% We have the algebraic identity
+\[
+(1 - {\rho}^2) Q \equiv {\Bigl[ \Bigl(\frac{y -
+{\mu}_2}{{\sigma}_2}\Bigr) - \rho \Bigl(\frac{x -
+{\mu}_1}{{\sigma}_1}\Bigr) \Bigr] }^2 + (1 - {\rho}^2)
+{\Bigl(\frac{x -{\mu}_1}{{\sigma}_1} \Bigr)}^2
+\]
+(reducing the number of occurrences of $y$ to $1$, as we intend to
+integrate out $y$ first).  Then (taking the terms free of $y$ out
+through the $y$-integral): for
+\[
+ c_x := {\mu}_2 + \rho \frac{{\sigma}_2}{{\sigma}_1} (x -{\mu}_1),
+\]
+$$
+f_1(x) = \frac{\exp(-\frac{1}{2} (x - {\mu}_1)^2/{\sigma}_1^2)}
+{{\sigma}_1 \sqrt{2 \pi}} \int_{-\infty}^{\infty}
+\frac{1}{{\sigma}_2 \sqrt{2 \pi} \sqrt{1 - {\rho}^2}}
+\exp\left(\frac{-\frac{1}{2}(y - c_x)^2}{{\sigma}_2^2 (1 -
+{\rho}^2)}\right) dy.  \eqno(*)
+$$
+The integral is $1$ (`normal density').  So
+\[
+f_1(x) =  \frac{\exp(-\frac{1}{2} (x - {\mu}_1)^2/{\sigma}_1^2)}
+{{\sigma}_1 \sqrt{2 \pi}},
+\]
+which integrates to $1$ (`normal density'), proving \\
+\ni{\bf Fact 1.} $f(x,y)$ is a joint density function
+(two-dimensional), with marginal density functions $f_1(x),
+f_2(y)$ (one-dimensional).  So we can write
+\[
+f(x,y) = f_{X,Y}(x,y), \qquad f_1(x) = f_X(x), \qquad f_2(y) =
+f_Y(y).
+\]
+\ni{\bf Fact 2.} $X,Y$ are normal: $X$ is $N({\mu}_1,
+{\sigma}_1^2)$, $Y$ is $N({\mu}_2, {\sigma}_2^2)$.  For, we showed
+$f_1 = f_X$ to be the $N({\mu}_1, {\sigma}_1^2)$ density above,
+and similarly for $Y$ by symmetry.\\
+\ni{\bf Fact 3.} $EX = {\mu}_1, EY = {\mu}_2, var X =
+{\sigma}_1^2, var Y = {\sigma}_2^2$.\\
+\i This identifies four out of the five parameters: two means
+${\mu}_i$, two variances ${\sigma}_i^2$.  Next, recall conditional densities [L9]:
+\[
+f_{Y \vert X}(y \vert x) := f_{X,Y}(x,y)/f_X(x) =
+f_{X,Y}(x,y)/\int_{-\infty}^{\infty} f_{X,Y}(x,y) dy.
+\]
+\i Returning to the bivariate normal:\\
+\ni {\bf Fact 4.} The conditional distribution of $y$
+given $X = x$ is $N({\mu}_2 + \rho {{{\sigma}_2} \over
+{{\sigma}_1}} (x - {\mu}_1),\quad {\sigma}_2^2 (1 - {\rho}^2))$.
+
+\noindent{\it Proof}.  Go back to completing the square (or,
+return to (*) with $\int$ and $dy$ deleted):
+\[
+f(x,y) = \frac{\exp(-\frac{1}{2}(x - {\mu}_1)^2/{\sigma}_1^2)}
+{{\sigma}_1 \sqrt{2 \pi}}.\frac{\exp(-\frac{1}{2}(y
+-c_x)^2/({\sigma}_2^2 (1 - {\rho}^2)))} {{\sigma}_2 \sqrt{2\pi}
+\sqrt{1 - {\rho}^2}}.
+\]
+The first factor is $f_1(x)$, by Fact 1.  So, $f_{Y
+\vert X}(y\vert x) = f(x,y)/f_1(x)$ is the second factor:
+\[
+f_{Y \vert X}(y \vert x) = \frac{1}{\sqrt{2 \pi} {\sigma}_2
+\sqrt{1 - {\rho}^2}} \exp \Bigl(\frac{-(y - c_x)^2}{2{\sigma}_2^2
+(1 - {\rho}^2)}\Bigr),
+\]
+where $c_x$ is the linear function of $x$ given below (*). // \\
+
+\i This not only completes the proof of Fact 4 but gives Facts 5 and 6:\\
+\ni {\bf Fact 5.} The conditional mean $E(Y \vert X = x)$ is {\it linear} in $x$:
+\[
+E(Y \vert X = x) = {\mu}_2 + \rho \frac{{\sigma}_2}{{\sigma}_1} (x
+- {\mu}_1).
+\]
+\ni {\bf Fact 6.} The conditional
+variance of $Y$ given $X = x$
+is
+\[
+var(Y \vert X = x) = {\sigma}_2^2 (1 - {\rho}^2).
+\]
+\ni {\bf Fact 7.} The correlation coefficient of $X,Y$ is
+$\rho$.
+
+\noindent{\it Proof}.
+\[
+\rho(X,Y) := E \Bigl[\Bigl(\frac{X - {\mu}_1}{{\sigma}_1}\Bigr)
+\Bigl(\frac{Y - {\mu}_2}{{\sigma}_2}\Bigr)\Bigr] =
+\int\int\Bigl(\frac{x - {\mu}_1}{{\sigma}_1}\Bigr) \Bigl(\frac{y -
+{\mu}_2}{{\sigma}_2}\Bigr) f(x,y) dx dy.
+\]
+Substitute for $f(x,y) = c \exp(-\frac{1}{2}Q)$, and make the
+change of variables $u:= (x - {\mu}_1)/{\sigma}_1$, $v := (y
+-{\mu}_2)/{\sigma}_2$:
+\[
+\rho(X,Y) = \frac{1}{2 \pi \sqrt{1 - {\rho}^2}} \int \int uv \exp
+\Bigl(\frac{-[u^2 - 2 \rho uv + v^2]}{2(1 - {\rho}^2)}\Bigr) dudv.
+\]
+Completing the square, $[u^2 - 2 \rho uv + v^2] = (v -
+\rho u)^2 + (1 - {\rho}^2) u^2$.  So
+\[
+\rho(X,Y) = \frac{1}{\sqrt{2 \pi}} \int u
+\exp\left(-\frac{u^2}{2}\right) du. \frac{1}{\sqrt{2 \pi} \sqrt{1
+- {\rho}^2}} \int v \exp\left(-\frac{(v - \rho u)^2}{2(1 -
+{\rho}^2)}\right) dv.
+\]
+Replace $v$ in the inner integral by $(v - \rho u) + \rho u$, and
+calculate the two resulting integrals separately.  The first is
+zero (`normal mean', or symmetry), the second is $\rho u$ (`normal
+density').  So (`normal variance')
+\[
+\rho(X,Y) = \frac{1}{\sqrt{2 \pi}}. \rho \int u^2
+\exp\left(-\frac{u^2}{2}\right) du = \rho.
+\]
+\i This completes the identification of all five parameters in the
+bivariate normal distribution: two means ${\mu}_i$, two variances
+${\sigma}_i^2$, one correlation $\rho$.\\
+
+% \i We note in passing \\
+\ni {\bf Fact 8.} The bivariate normal law has {\it elliptical contours}.\\
+\i For, the contours are $Q(x,y) = const$, which (Galton) are ellipses.\\
+
+\ni {\it Moment Generating Function (MGF)}. Recall (see e.g. Haigh (2002), 102-6) $M(t)$,
+or $M_X(t)$, $:= E(e^{tX})$.  For $X$ normal $N(\mu, {\sigma}^2)$,
+\[
+M(t) = \frac{1}{{\sigma} \sqrt{2 \pi}} \int e^{tx}
+\exp(-\frac{1}{2} (x - \mu)^2/{\sigma}^2) dx.
+\]
+Change variable to $u := (x - \mu)/\sigma$:
+\[
+M(t) = \frac{1}{\sqrt{2 \pi}} \int \exp(\mu t + \sigma ut -
+\frac{1}{2}u^2) du.
+\]
+Completing the square,
+\[
+M(t) = e^{\mu t}.\frac{1}{\sqrt{2 \pi}} \int \exp(-\frac{1}{2}(u-
+\sigma t)^2) du. e^{\frac{1}{2} {\sigma}^2 t^2},
+\]
+or $M_X(t) = \exp(\mu t + \frac{1}{2}{\sigma}^2 t^2)$ (recognising
+that the central term on the right is 1 -- `normal density') . So
+$M_{X - \mu} (t) = \exp(\frac{1}{2}{\sigma}^2 t^2)$. Then (check)
+$\mu =EX = M_X'(0)$, $var X = E[(X - \mu)^2] = M_{X - \mu}''(0)$.\\
+\i Similarly in the bivariate case: the MGF is $M_{X,Y}(t_1, t_2)
+:= E \exp(t_1 X + t_2 Y)$.  In the bivariate normal case:
+\begin{eqnarray*}
+M(t_1, t_2)
+&=& E(\exp(t_1 X + t_2 Y)) = \int \int \exp(t_1 x + t_2 y) f(x,y) dxdy\\
+&=& \int \exp(t_1 x) f_1 (x) dx \int \exp(t_2 y) f(y \vert x) dy.\\
+\end{eqnarray*}
+The inner integral is the MGF of $Y \vert X=x$, which is
+$N(c_x,{\sigma}_2^2, (1 - {\rho}^2))$, so is $\exp(c_x t_2 +
+\frac{1}{2}{\sigma}_2^2 (1 - {\rho}^2) t_2^2)$. By Fact 5 $c_x t_2
+=[{\mu}_2 + \rho \frac{{\sigma}_2}{{\sigma}_1} (x -{\mu}_1)]t_2$,
+so
+\[
+M(t_1,t_2) = \exp(t_2 {\mu}_2 - t_2 \frac{{\sigma}_2}{{\sigma}_1}
+{\mu}_1 + \frac{1}{2}{\sigma}_2^2 (1 - {\rho}^2) t_2^2) \int
+\exp([t_1 + t_2 \rho \frac{{\sigma}_2}{{\sigma}_1}]x) f_1(x) dx.
+\]
+Since $f_1(x)$ is $N({\mu}_1,{\sigma}_1^2)$, the inner integral is
+a normal MGF, which is thus $\exp({\mu}_1[t_1 + t_2 \rho
+\frac{{\sigma}_2}{{\sigma}_1}] + \frac{1}{2} {\sigma}_1^2
+[\ldots]^2)$. Combining the two terms and simplifying: \\
+\ni {\bf Fact 9.} The joint MGF is
+\[
+M_{X,Y}(t_1,t_2) = M(t_1,t_2) = \exp({\mu}_1 t_1 + {\mu}_2 t_2 +
+\frac{1}{2} [{\sigma}_1^2 t_1^2 + 2 \rho {\sigma}_1 {\sigma}_2 t_1
+t_2 + {\sigma}_2^2 t_2^2]).
+\]
+\ni {\bf Fact 10.} $X,Y$ are independent if and only if $\rho = 0$.\\
+
+\noindent{Proof}. For densities: $X,Y$ are independent iff the
+joint density $f_{X,Y}(x,y)$ {\it factorises} as the {\it product}
+of the marginal densities $f_X(x).f_Y(y)$ (see e.g. Haigh (2002),
+Cor. 4.17).\\
+\i For MGFs: $X,Y$ are independent iff the joint MGF $M_{X,Y}(t_1,
+t_2)$ {\it factorises} as the {\it product} of the marginal MGFs
+$M_X(t_1).M_Y(t_2)$.  From Fact 9, this occurs iff $\rho = 0$.
+Similarly with CFs, if we prefer to work with them. // \\
+
+\ni {\it Note}.  We can re-write Fact 5 above as
+$$
+E[Y | X] = {\mu}_2 + \frac{\rho { \sigma}_1}{{\sigma}_2} (X - {\mu}_1).
+$$
+So as $E[X] = {\mu}_1$, this illustrates the Conditional Mean Formula (II.4 Property 6, L10):
+$$
+E[ E[Y | X]] = {\mu}_2 + \frac{\rho { \sigma}_1}{{\sigma}_2} (E[X] - {\mu}_1) = {\mu}_2 = E[Y]. 
+$$
+Similarly, Fact 6 illustrates the Conditional Variance Formula.             \hfil NHB \break
+
+\end{document}

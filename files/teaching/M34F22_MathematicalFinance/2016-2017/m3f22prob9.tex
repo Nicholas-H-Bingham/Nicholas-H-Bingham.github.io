@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33prob9 \\
+\begin{center}
+{\bf M3F22 PROBLEMS 9.  8.12.2017} 
+\end{center}
+\ni Q1 {\it Gaussian distributions}.  \\
+\i With the multivariate normal (multinormal, multivariate Gaussian) distribution as in V.2 W8, show that all linear combinations $\sum_1^n a_i X_i$ of a multinormal random vector are normal (in one dimension).  [This is actually the best way to {\it define} the multinormal.] \\
+\i Deduce that It\^o integrals $\int_0^t f(s) dB_s$ with $f$ continuous and deterministic are normally (Gaussian) distributed. \\
+
+\ni Q2 {\it Ornstein-Uhlenbeck process}.  \\
+\i For $V = (V_t)$ the solution to the Ornstein-Uhlenbeck SDE $(OU)$\\
+$$
+dV = - \beta V dt + c dB:                              \eqno(OU)
+$$
+(i) By using the It\^o isometry, or otherwise, show that $V_t$ has distribution 
+$$
+V_t \sim N(0, {\s}^2 (1 - e^{-2 \b t})/(2 \b)).
+$$
+
+(ii) By (i) and independence of Brownian increments, or otherwise, show that the covariance is
+$$
+cov(V_t, V_{t+u}) = {\s}^2 e^{-2 \b u} (1 - 2e^{-2 \b t}) \qquad (u \geq 0).
+$$
+(iii) Show that $V$ is Gaussian and Markov. \\
+(iv) Show that $V_t$ converges in distribution as $t \to \infty$, and find the limit distribution. 
+
+\hfil NHB \break
+
+\end{document}

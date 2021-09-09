@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\def\qq{\qquad}
+\def\ti{\tilde}
+\ni m3f22soln8 \\
+\begin{center}
+{\bf M3F22 SOLUTIONS 8.  8.12.2017} 
+\end{center}
+\ni Q1: {\it Lognormal distribution}. By the normal MGF, 
+$$
+M_Y(t) = E[e^{tY}] = \exp \{ \mu t + \frac{1}{2}{\s}^2 t^2 \}.
+$$  
+Taking $t = 1$,
+$$
+M_Y(1) = E[e^{Y}] = \exp \{ \mu  + \frac{1}{2}{\s}^2 \}.
+$$  
+As $X = e^Y$, this gives
+$$
+E[X] = E[e^Y] = e^{\mu + \frac{1}{2}{\s}^2}.
+$$
+(ii) In the Black-Scholes model, stock prices are geometric Brownian motions, driven by stochastic differential equations
+$$
+dS = S(\mu dt + \s dB), \eqno(GBM)
+$$
+with $B$ Brownian motion.  This has solution (from It\^o's lemma, VI.6  -- as in VII.1)
+$$
+S_t = S_0 \exp \{ (\mu - \frac{1}{2}{\s}^2)t + \s B_t \}.
+$$
+So $\log S_t = \log S_0 + (\mu - \frac{1}{2}{\s}^2)t + \s B_t$ is normally distributed, so $S_t$ is lognormal. \\
+
+\ni Q2 {\it Brownian covariance}.  For $s \leq t$,
+$$
+B_t = B_s + (B_t - B_s), \qquad B_s B_t = B_s^2 + B_s (B_t - B_s).
+$$
+Take expectations: on the left we get $cov(B_s, B_t)$.  The first term on the right is, as $E[B_s] = 0$, $var(B_s) = s$.  As BM has independent increments, $B_t - B_s$ is independent of $B_s$, so
+$$
+E[B_s (B_t - B_s)] = E[B_s].E[B_t - B_s] = 0.0 = 0.
+$$
+Combining, $cov(B_s, B_t) = s$ for $s \leq t$.  Similarly, for $t \leq s$ we get $t$.  Combining, $cov(B_s, B_t) = \min(s,t)$. \\
+
+\ni Q3 {\it Brownian scaling}.  With $B_c(t) := B(c^2 t)/c$,
+$$
+cov(B_c(s), B_c(t)) = E[B(c^2 s)/c.B(c^2 t)/c] = c^{-2} \min(c^2 s,c^2 t) = \min(s,t) = cov(B_s, B_t).
+$$
+So $B_c$ has the same mean 0 and covariance $\min(s,t)$ as BM.  It is also (from its definition) continuous, Gaussian, stationary independent increments etc.  So it has all the defining properties of BM.  So it {\it is} BM. \\
+\i So BM is a {\it fractal}: it reproduces itself if time and space are scaled together in this way.  This is why if we "zoom in and blow up" a Brownian path, it still looks like a Brownian path -- however often we do this.  By contrast, if we zoom in and blow up a smooth function, it starts to look straight (because it has a tangent). \\
+\i Specialising to the zero set $Z$ of BM $B$, this too is a fractal because $B$ is. \\
+
+\ni Q4 {\it Time-inversion}.  Like BM, $X$ is continuous (where it is defined -- away from 0) and Gaussian.  Its covariance is
+$$
+cov(X_s,X_t) = cov(s B(1/s),t B(1/t)) = st cov(B(1/s),B(1/t))
+$$
+$$
+= st \min(1/s,1/t) = \min(t,s) = \min(s,t).
+$$
+So as $X$ has the same covariance as BM, $X$ {\it is} BM.  But BM is continuous everywhere, not just away from 0.  So $X$ is continuous at 0 too, and has $X(0) = 0$ as BM does.  So
+$$
+X_t \to 0 \quad (t \to 0): \qquad t B(1/t) \to 0 \quad (t \to 0): \qquad B(t)/t \to 0 \quad (t \to \infty).
+$$
+
+Q5.  We calculate $\int B(u) dB(u)$. We start by
+approximating the integrand by a sequence of simple functions.
+$$ X_n(u) = \left\{
+\begin{array}{ll}
+B(0)=0 \qquad &\mbox{if}\qquad 0 \leq u \leq t/n,\\ B(t/n) \qquad
+&\mbox{if}\qquad
+t/n < u \leq 2t/n,\\ \vdots &\vdots\\
+B\!\left((n-1)t/n \right) \qquad &\mbox{if}\qquad (n-1)t/n < u
+\leq t.
+\end{array}
+\right.
+$$
+By definition,
+$$
+\int_0^t B(u) dB(u)
+= \lim_{n \to \infty} \sum_{k=0}^{n-1} B(kt/n) (B((k+1)t/n)- B(kt/n)).
+$$
+Replacing $B(kt/n)$ by $\frac{1}{2}(B((k+1)t/n) + B(kt/n)) - \frac{1}{2}(B((k+1)t/n) - Bkt/n))$, the RHS is
+$$
+\sum \frac{1}{2}(B((k+1)t/n) + B(kt/n)).(B((k+1)t/n)- B(kt/n))
+$$
+$$
+ - \sum \frac{1}{2}(B((k+1)t/n) - B(kt/n)).(B((k+1)t/n)- B(kt/n)).
+$$
+The first sum is $\sum \frac{1}{2}(B((k+1)t/n)^2 - B(kt/n)^2)$, which telescopes (as a sum of differences) to $\frac{1}{2}B(t)^2$ ($B(0) = 0$).  The second sum is \\
+$\frac{1}{2} \sum (B(k+1)t/n) - B(kt/n))^2$, an approximation to the quadratic variation of $B$ on $[0,t]$, which tends to $\frac{1}{2}t$ by L\'evy's theorem on the QV.  Combining,
+$$
+\int_0^t B(u)dB(u) = \frac{1}{2}B(t)^2 - \frac{1}{2}t.
+$$
+Note the contrast with ordinary (Newton-Leibniz) calculus! It\^{o}
+calculus requires the second term on the right -- the It\^{o}
+correction term -- which arises from the quadratic variation of
+$B$. \\
+
+
+\hfil NHB \break
+
+
+\end{document}

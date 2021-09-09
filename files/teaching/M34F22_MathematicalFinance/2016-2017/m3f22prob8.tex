@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\partial}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\ni m3f33prob8 \\
+\begin{center}
+{\bf M3F22 PROBLEMS 8.  1.12.2017} 
+\end{center}
+
+\ni Q1 ({\it The lognormal distribution}).  The {\it lognormal distribuktion} $LN(\mu, {\s}^2)$ is defined as the distribution of $X := e^Y$, where $Y \sim N(\mu, {\s}^2)$. v\\
+(i) Show that
+$$
+E[X] = \exp \{ \mu + \half {\s}^2 \}.
+$$
+(ii) Explain why stock prices in the Black-Scholes model are lognormal. \\
+
+\ni Q2 {\it Brownian covariance}.  The {\it covariance} of random variables $X$, $Y$ is
+$$
+cov(X,Y) := E[(X - E[X])(Y - E[Y])].
+$$
+Show that for $B = (B_t)$ Brownian motion (BM), its covariance is
+$$
+cov(B_s,B_t) = min(s,t).
+$$
+\i We quote that for a Gaussian process (one all of whose finite-dimensional distributions are Gaussian, such as BM), the process is characterised by its mean function and covariance function (so mean 0 and covariance $\min(s,t)$ characterise BM). \\
+
+\ni Q3 {\it Brownian scaling}.  With $c > 0$ and $B$ Brownian motion, show that $B_c$, where
+$$
+B_c(t) := B(c^2t)/c,
+$$
+has the same covariance function $\min(s,t)$ as Brownian motion $B$.  Deduce that (as $B_c$ is also continuous and Gaussian) that $B_c$ {\it is} Brownian motion.  It is formed from $B$ by {\it Brownian scaling}. \\
+\i Deduce that $B$ is {\it self-similar}: it reproduces itself it time and space are both scaled as above.  We call such a self-similar process a {\it fractal}. \\
+\i If $Z$ is the zero-set of $B$ and $Z_c$ that of $B_c$, deduce that $Z, Z_c$ are fractals. \\
+{\it Note}.  1.  Those with experience of computer graphics will recall `zooming in and blowing up' -- selecting a portion of a graphic (of particular interest), and blowing it up to full screen.  The essence of a fractal is that it {\it looks just the same} under this process -- even if we iterate it.  By contrast, a reasonably smooth function (differentiable, say) looks {\it quite different} -- it starts to look straight, {\it because it has a tangent}. \\
+2.  You all know calculus, and you may not have met fractals before (or at least, not often).  You might suspect on this basis that `a typical function' is smooth (as in calculus), and that fractals are rare and pathological: the first examples of (what we now call) fractals were constructed to be continuous and nowhere differentiable (try drawing one!).  On the contrary: in a way that can be made precise (Baire category), {\it a typical continuous function is nowhere differentiable}. \\ 
+
+\ni Q4 {\it Time inversion}.  For $B$ BM, and
+$$
+X_t := t B(1/t) \qquad (t \neq 0),
+$$
+$X = (X_t)$ is also BM. \\
+\i Deduce or prove otherwise that for $B$ BM
+$$
+B(t)/t \to 0 \qquad (t \to \infty).
+$$
+
+\ni Q5.  By writing
+$$
+\int_0^t B(u) dB(u)
+= \lim_{n \to \infty} \sum_{k=0}^{n-1} B(kt/n) (B((k+1)t/n)- B(kt/n))
+$$
+$$
+=\sum \frac{1}{2}(B((k+1)t/n) + B(kt/n)).(B((k+1)t/n)- B(kt/n))
+$$
+$$
+ - \sum \frac{1}{2}(B((k+1)t/n) - B(kt/n)).(B((k+1)t/n)- B(kt/n)),
+$$
+or otherwise, show that
+$$
+\int_0^t B(u) dB(u)
+= \frac{1}{2}B(t)^2 - \frac{1}{2}t.
+$$
+Comment on the difference between this It\^o calculus result and ordinary (Newton-Leibniz) calculus. \\
+
+\hfil NHB \break
+
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\ni smfprob1(1617).tex \\
+\begin{center}
+{\bf SMF PROBLEMS 1.  19.1.2017} \\
+\end{center}
+
+\ni Q1.  In a normal model $N(\m, {\s}^2)$, show that $\bar{X}$ is efficient for $\m$.\\
+
+\ni Q2.  In $N(\m, {\s}^2)$ with $\m$ known, show that $\frac{1}{n} \sum_1^n (X_i - \m)^2$ is efficient for $v := {\s}^2$. \\
+
+\ni Q3.  In $N(\mu, {\sigma}^2)$ with $\sigma$ the parameter of interest but $\mu$ unknown (so a nuisance parameter), show that the unbiased sample variance
+$$
+S_u^2 := \frac{1}{n-1} \sum_1^n (X_i - \bar X)^2
+$$
+is asymptotically efficient for $v := {\sigma}^2$, with efficiency $1 - 1/n \to 1$. \\
+
+\ni Q4 ({\it Conditions for equality in the Cram\'er-Rao (Information, CR) Inequality}). \\
+(i) Show that in the Cauchy-Schwarz Inequality
+$$
+(\int fg)^2 \leq (\int f^2)(\int g^2),
+$$
+equality holds iff there is a linear relationship between $f$ and $g$:
+$$
+af + bg = 0
+$$
+for some constants $a, b$. \\
+(ii) Deduce that we have equality in CR iff
+$$
+u = a {\ell}' + b
+$$
+for some $a,b$.  Find $b$. \\
+(iii) Observing that the constant $a$ above may depend on the parameter $\t$, and that when we integrate ${\ell}'$ to get $\ell$, $L$ the constant of integration may depend on the data $\bf X$, show that equality holds iff $L$ has the form
+$$
+L = \exp \{ \a(\t) u({\bf X}) + \b(\t) + k({\bf X}) \}.
+$$
+Such likelihoods form the {\it exponential family} -- roughly, the families for which one can do parameter estimation satisfactorily. \\
+% (iv) Show that $u({\bf X})$ is (a) sufficient for $\t$; (b) minimal sufficient for $\t$. \\
+
+\ni Q5 ({\it Symmetric exponential location family}).  Here
+$$
+f(x) = \half \exp \{ |x - \t | \}.
+$$
+(i) Show that
+$$
+\ell = const - \sum |x_i - \t|.
+$$
+Show that this is maximised where $\t$ is the {\it median} of the sample, $Med = Med(x_1, \ldots, x_n)$, and deduce that this is the MLE:
+$$
+\hat{\m} = Med.
+$$
+(ii) Show that the information per reading is 1 (use $I = \int (\partial \log f/\partial \t)^2 f$). \\
+\i We quote that the sample median $Med$ is asymptotically normal with mean the (population) median $med$ and variance $1/(4 n f(med)^2)$. \\
+(iii) Show that $Med$ is asymptotically normal, unbiased and efficient. \\
+
+\ni Q6 ({\it Cauchy location family}).  The Cauchy location family is defined by
+$$
+f(x; \m) = \frac{1}{\pi(1 + (x - \m)^2)}.
+$$
+(i) Show that this does not belong to the exponential family (it is a standard example of this!) \\
+(ii) Show that the MLE has asymptotic variance
+$$
+var(\hat{\m}) \sim 2/n
+$$
+and efficiency $8/{\pi}^2$ ($\sim 81\%$).
+You may quote that
+$$
+I := \int_{-\infty}^{\infty} \frac{x^2}{[1 + x^2]^3} dx = \half.
+$$
+\hfil NHB \break
+
+
+
+
+\end{document}

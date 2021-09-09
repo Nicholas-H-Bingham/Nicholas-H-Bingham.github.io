@@ -1,0 +1,40 @@
+\documentclass[]{standalone}
+
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+\begin{tikzpicture}[
+                   grow = right,
+edge from parent/.style = {draw,-latex},
+         label distance = 5mm,
+      every node/.style = {minimum width=5em, inner sep=5pt},
+         level distance = 35mm,
+       sibling distance = 15mm,
+                     ]
+\node[label=90:{$t_0$}] [draw, align=left]{I $\heartsuit$ M34F22 \\ Fill in SOLE!! }
+    child {node [draw, align=left]{$t_1$ bottom}
+        child {node [draw, align=left]{$t_2$ bottom}
+            child {node [draw, align=left]{$t_3$ bottom}}
+            child {node [draw, align=left]{$t_3$ lower middle}}
+                }
+        child {node {}}%<---------------- already printed
+            }
+    child {node[label=90:{$t_1$}] [draw, align=left]{$t_1$ top}
+        child {node [draw, align=left]{$t_2$ middle}
+            child {node {}}%<------------ already printed
+            child {node [draw, align=left]{$t_3$ upper middle}}
+                }
+        child {node[label=90:{$t_2$}] [draw, align=left]{$t_2$ top}
+            child {node {}}%<------------ already printed
+            child {node[label=90:{$t_3$}] [draw, align=left]{$t_3$ top}}
+                }
+                };
+\end{tikzpicture}
+
+
+
+\end{document}

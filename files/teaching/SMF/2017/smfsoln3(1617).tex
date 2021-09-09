@@ -1,0 +1,93 @@
+%smfsoln3.tex 23.12.2010 Was 18.5.2012
+\documentclass[12pt]{article}
+\begin{document}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\g{\gamma}
+\def\qq{\qquad}
+\def\L{\Lambda}
+\def\C{\cal C}
+\def\E{\cal E}
+\def\G{\Gamma}
+\def\F{\cal F}
+\def\K{\cal K}
+\def\O{\cal O}
+\def\A{\cal A}
+\def\B{\cal B}
+\def\S{\cal S}
+\def\N{\cal N}
+\def\M{\cal M}
+\def\P{\cal P}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\s{\sigma}
+\def\t{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\m{\mu}
+\def\n{\nu}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\l{\lambda}
+\def\Si{\Sigma}
+\def\half{\frac{1}{2}}
+\def\hb{\hfil \break}
+\ni smfsoln3(1617).tex \\
+\begin{center}
+{\bf SMF SOLUTIONS 3. 9.2.2017} \\
+\end{center}
+
+\ni Q1.   One can notice the following effects (cf Lai-Xing):
+\begin{enumerate}
+\item The first component can be interpreted as a parallel  shift  component. The factor loadings are roughly constant among maturities, meaning the change in the rate for a maturity is roughly the same for other maturities.  Consequently,  the first
+factor accounts for the ``average rate''.
+\item The  second  component  corresponds  to  a
+tilt
+.   The  factor  loadings  of  the  second
+component have a monotonic change with maturities:changes in long-maturity and
+short maturity have opposite signs.  The second factor consequently accounts for
+the ``slope'' across maturities.
+\item The third component is the
+curvature
+.  The factor loadings of the third component
+are different for the mid-term rates and the average of long- and short-term rates,
+revealing a curvature resembling the convex shape of the relationship between the
+rates and their maturities.
+\end{enumerate}
+
+\ni Q2. \begin{enumerate}
+\item The correlation matrix is
+$$\left(
+\begin{array}{cc}
+1 & 0.8 \\
+0.8 & 1 
+\end{array}
+\right),$$
+which has eigenvectors $(1,1)$ and $(1,-1)$ with eigenvalues $1.8$ and $0.2$. So most of the variation is in the direction $(1,1)$. This is expected, given the high correlation. 
+\item The covariance matrix is
+$$\left(
+\begin{array}{cc}
+1,000,000 & 800 \\
+800 & 1 
+\end{array}
+\right).$$
+This has eigenvectors (approximately) $(1250, 1)$ and $(-0.0008,1)$ with eigenvalues $\approx 1,000,000$ and $\approx 0.36$. The first variable dominates the PCA. 
+\item The variance of Variable 1 is now $1 \times 10^{-6}$ and the covariance matrix is
+$$\left(
+\begin{array}{cc}
+1 \times 10^{-6} & 8 \times 10^{-4} \\
+8 \times 10^{-4} & 1 
+\end{array}
+\right),$$
+which will display the opposite behaviour to (ii) and the second variable will dominate the PCA. The correlation matrix will not change, no matter the scaling of the variables. To use correlation matrices for PCA in R use the command \texttt{princomp(yourdata, cor=T)}.\end{enumerate} 
+
+
+\hfil NHB/TLS \break
+
+
+
+\end{document}

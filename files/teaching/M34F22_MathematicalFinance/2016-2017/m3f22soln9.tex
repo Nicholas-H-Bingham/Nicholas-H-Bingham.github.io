@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{color}
+\def\bibfont{\footnotesize}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{url}
+
+\begin{document}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Sp{{\mathbb{S}}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\hb{\hfil \break}
+\def\ni{\noindent}
+\def\i{\indent}
+\def\a{\alpha}
+\def\b{\beta}
+\def\e{\epsilon}
+\def\d{\delta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\m{\mu}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\th{\theta}
+\def\z{\zeta}
+\def\p{\phi}
+\def\o{\omega}
+\def\O{\Omega}
+\def\t{\tau}
+\def\L{\it \char'44}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\half{\frac{1}{2}}
+\def\qq{\qquad}
+\def\ti{\tilde}
+\ni m3f22soln9 \\
+\begin{center}
+{\bf M3F22 SOLUTIONS 9.  15.12.2017} 
+\end{center}
+
+\ni Q1 {\it Gaussian distributions}.  By VI.2, if
+${\bf \mu} \in {\R}^n$, ${\bf \Si}$ is a non-negative definite $n
+\times n$ matrix, ${\bf X}$ has distribution $N({\bf \mu}, {\bf \Si})$
+if it has characteristic function
+$$
+{\phi}_{\bf X} ({\bf t})
+:= E \exp \{i {\bf t}^T .{\bf X} \}
+= \exp \{ i {\bf t}^T .{\bf \mu} - \half {\bf t}^T {\bf \Si} {\bf t} \} \qquad ({\bf t} \in {\R}^n).
+$$
+Take ${\bf t} := t {\bf a}$ with $t$ real and ${\bf a}$ a constant $n$-vector:
+$$
+{\phi}_{{\bf a}^T {\bf X}} (t)
+:= E \exp \{i t {\bf a}^T {\bf X} \}
+= \exp \{ i t {\bf a}^T {\bf \mu} - \half t^2 {\bf a}^T {\bf \Si} {\bf a} \}.
+$$
+This says that
+$$
+{\bf a}^T {\bf X} \sim N({\bf a}^T {\bf \mu}, {\bf a}^T {\bf \Sigma} {\bf a}).
+$$
+\i For an It\^o integral $\int_0^t X_s dB_s$, we can approximate the integral by a sum.
+In each term in the sum, the integrand can be treated like a constant (by continuity, the variation of the integrand over a small subinterval contributes only a second-order term, so is
+negligible).  Each sum has a normal distribution, so a normal CF as above.  As the partition is refined, the sum tends to the integral in distribution.  So (L\'evy's continuity theorem) the
+CFs converge to the CF of the limit.  So this limiting CF has the same functional form as a Gaussian CF.  So the integral is Gaussian: {\it Gaussianity is preserved under linear operations}. \\
+
+\ni Q2 {\it (Ornstein-Uhlenbeck process}.  \\
+(i) $V_t$ has mean $v_0 e^{-\b t}$, as
+$$
+E[ \int_0^t e^{\b u} dB_u] = \int_0^t e^{\b u} E[dB_u] = 0.
+$$
+By the It\^o isometry, $V_t$ has variance
+$$
+E[(\s e^{-\b t} \int_0^t e^{\b u} dB_u)^2] = {\s}^2 e^{-2 \b t} \int_0^t (e^{\b u})^2 du
+$$
+$$
+= {\s}^2 e^{-2 \b t} \int_0^t e^{-2 \b u} du = {\s}^2 e^{-2 \b t} [e^{2 \b t} - 1]/(2 \b) = {\s}^2 [1 - e^{-2 \b t}]/(2 \b).
+$$
+%So the limit distribution as $t \to \infty$ is $N(0, {\s}^2/(2 \b))$. \\
+(ii) For $u \geq 0$, the covariance is $cov(V_t, V_{t+u})$, which is
+$$
+{\s}^2 E[e^{-\b t} \int_0^t e^{\b v} dB_v.e^{-\b (t + u)} (\int_0^t + \int_t^{t+u}) e^{\b w} dB_w].
+$$
+By independence of Brownian increments, the $\int_t^{t+u}$ term contributes 0, leaving as before
+$$
+cov(V_t, V_{t+u}) = {\s}^2 e^{-\b u} [1 - e^{-2 \b t}]/(2 \b) \to {\s}^2 e^{-\b u}/(2 \b) \quad (t \to \infty).
+$$
+(iii)  The process $V$ is Markov (a diffusion), being the solution of the SDE $(OU)$.  $V$ is Gaussian, as it is obtained from the Gaussian process $B$ by linear operations (Q1). \\
+(iv)  As $t \to \infty$, the mean $\to 0$.  The variance (take $u = 0$ in (ii)) $\to {\s}^2/(2 \b)$.  So the limit distribution is $N(0,{\s}^2/(2 \b))$:
+$$
+V_t \to N(0,{\s}^2/(2 \b)).
+$$
+{\it Note}. 1.  The parameter $\b$ governs how quickly the process `forgets its present position', and reverts towards its long-term mean.  It has the dimensions of inverse time;
+$1/\b$ is called the {\it relaxation time}.\\
+2. This limiting distribution $N(0, {\s}^2/(2 \b))$ is the {\it Maxwell-Boltzmann distribution} of Statistical Mechanics.  \\
+3. The limit process is stationary Gaussian Markov, in contrast to Brownian motion, which is Gaussian Markov with stationary increments. \\
+
+\i The $OU$ model is used for the theory of interest rates, because it shows {\it mean reversion}, as interest rates normally do; in this context it is called the {\it Vasicek model}. \\
+\i Taking Bank Rate, say, as basic interest rate, this is usually a few percent, say in the range 3\% to 5\%, depending on the stage of the business cycle.  The Bank (of England, say) will
+raise Bank Rate to slow the economy down to prevent overheating (and reduce inflation), and raise it to stimulate the economy during a recession.  But during the aftermath of the Credit Crunch,
+or Crash of 2007 (US), 2008 (UK), ..., Bank Rate has stayed at historically extremely low levels (half a percent, or even less) for a long period -- unprecedented in the history of the Bank of England since its foundation in 1694.  Clearly the $OU$ model does not apply well to the current situation (interest rates are {\it negative} in some countries!).  This is not surprising, as the current situation is unprecedented.  \hfil NHB \break
+
+
+
+\end{document}
