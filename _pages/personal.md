@@ -10,5 +10,3 @@ author_profile: true
 # Reminiscences
 
 # Photographs
-
-# Obituaries
