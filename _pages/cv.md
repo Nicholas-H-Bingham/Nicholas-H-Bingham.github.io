@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-You may find a copy of my CV [here](https://nicholas-h-bingham.github.io/cv/cv_latest.pdf "CV") !
+You may find a copy of my CV [here](https://nicholas-h-bingham.github.io/files/cv/cv_latest.pdf "CV") !
