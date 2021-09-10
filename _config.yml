@@ -83,8 +83,8 @@ author:
   name             : "Nick Bingham"
   avatar           : "nick_profile_pic.png"
   bio              : "Senior Research Investigator at Imperial College London"
-  location         : "London, UK"
-  employer         : "Imperial College London"
+  location         :
+  employer         : "Imperial College London, London, UK"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=RRBNQAgAAAAJ&hl=en&oi=ao"
   email            :

@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my hompage !
+Welcome to my homepage ! 
