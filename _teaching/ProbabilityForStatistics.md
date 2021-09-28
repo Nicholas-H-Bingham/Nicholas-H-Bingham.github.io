@@ -1,10 +1,8 @@
 ---
 title: "ProbabilityForStatistics"
 collection: teaching
-type: "Postgraduate course"
-permalink: /teaching/2014-spring-teaching-1
+permalink: /teaching/ProbabilityForStatistics
 venue: "Imperial College London, Faculty of Natural Sciences, Department of Mathematics"
-date: 2014-01-01
 location: "London, United Kingdom"
 ---
 
