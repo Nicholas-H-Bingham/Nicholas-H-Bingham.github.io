@@ -20,7 +20,7 @@ Please find below notes for talks that I have given.
 [L'influence Mondiale de Paul L&eacute;vy dans le Domaine des Probabilit&eacute;s, Jussieu, 2011-12-15](https://nicholas-h-bingham.github.io/files/talks/LinfluenceMondialeDePaulLevyDansLeDomaineDesProbabilites_Jussieu2011.pdf)  
 
 ## 2012
-[Multivariate Prediction and Matrix Szeg&ouml; Theory, King's college London, 2012-01-24](https://nicholas-h-bingham.github.io/files/talks/MultivariatePredictionAndMatrixSzegoTheory_KingsCollegeLondon2012.pdf)  
+[Multivariate Prediction and Matrix Szeg&ouml; Theory, King's College London, 2012-01-24](https://nicholas-h-bingham.github.io/files/talks/MultivariatePredictionAndMatrixSzegoTheory_KingsCollegeLondon2012.pdf)  
 [Topological Regular Variation, Liverpool University, 2012-02-29](https://nicholas-h-bingham.github.io/files/talks/TopologicalRegularVariation_UniveristyOfLiverpool2012.pdf)  
 [Aspects of Prediction, Birbeck College, 2012-04-11](https://nicholas-h-bingham.github.io/files/talks/AspectsOfPrediction_BirbeckCollege2012.pdf)  
 [Keynote Speech - Conference on Everything, Churchill College, 2012-05-05](https://nicholas-h-bingham.github.io/files/talks/ConferenceOnEverything_ChurchillCollege2012.pdf)  
