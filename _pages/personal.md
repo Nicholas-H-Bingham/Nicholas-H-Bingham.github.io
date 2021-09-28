@@ -11,37 +11,37 @@ author_profile: true
 
 ### In Memoriam
 
-[Remembering John Hammersley](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RememberingJohnHammersley.pdf)
-[David Kendall (1918-2007)](https://nicholas-h-bingham.github.io/files/personal/reminiscences/DavidKendallObituary.pdf)
-[Lulu Bingham (1912-2008)](https://nicholas-h-bingham.github.io/files/personal/reminiscences/BlancheLouiseBinghamStHughsChronicle.pdf)
-[Remembering Pat Billingsley](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RememberingPatBillingsley.pdf)
+[Remembering John Hammersley](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RememberingJohnHammersley.pdf)  
+[David Kendall (1918-2007)](https://nicholas-h-bingham.github.io/files/personal/reminiscences/DavidKendallObituary.pdf)  
+[Lulu Bingham (1912-2008)](https://nicholas-h-bingham.github.io/files/personal/reminiscences/BlancheLouiseBinghamStHughsChronicle.pdf)  
+[Remembering Pat Billingsley](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RememberingPatBillingsley.pdf)  
 
 ### Youth memories
 
-[Tadcaster Grammar School](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TadcasterGrammarSchool.pdf)
-[Cambridge Statistical Laboratory](https://nicholas-h-bingham.github.io/files/personal/reminiscences/CambridgeStatisticalLaboratory.pdf)
-[Postgraduate memories](https://nicholas-h-bingham.github.io/files/personal/reminiscences/PostgraduateMemories.pdf)
+[Tadcaster Grammar School](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TadcasterGrammarSchool.pdf)  
+[Cambridge Statistical Laboratory](https://nicholas-h-bingham.github.io/files/personal/reminiscences/CambridgeStatisticalLaboratory.pdf)  
+[Postgraduate memories](https://nicholas-h-bingham.github.io/files/personal/reminiscences/PostgraduateMemories.pdf)  
 
 ### Athletics
 
-[Race the train and me](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RaceTheTrainAndMe.pdf)
-[The marathon and me](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheMarathonAndMe.pdf)
-[The Cabbage Patch 10](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheCabbagePatch10.pdf)
+[Race the train and me](https://nicholas-h-bingham.github.io/files/personal/reminiscences/RaceTheTrainAndMe.pdf)  
+[The marathon and me](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheMarathonAndMe.pdf)  
+[The Cabbage Patch 10](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheCabbagePatch10.pdf)  
 #### Berkhamsted Half-marathons
-[Berkhamsted 2004](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2004.pdf)
-[Berkhamsted 2005](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2005.pdf)
-[Berkhamsted 2006](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2006.pdf)
-[Berkhamsted 2007](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2007.pdf)
-[Berkhamsted 2009](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2009.pdf)
-[Berkhamsted 2010](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2010.pdf)
-[Berkhamsted 2011](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2011.pdf)
-[Twenty Berkys](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/TwentyBerkhamstedHalfMarathons.pdf)
-[Berkhamsted 2015](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2015.pdf)
+[Berkhamsted 2004](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2004.pdf)  
+[Berkhamsted 2005](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2005.pdf)  
+[Berkhamsted 2006](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2006.pdf)  
+[Berkhamsted 2007](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2007.pdf)  
+[Berkhamsted 2009](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2009.pdf)  
+[Berkhamsted 2010](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2010.pdf)  
+[Berkhamsted 2011](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2011.pdf)  
+[Twenty Berkys](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/TwentyBerkhamstedHalfMarathons.pdf)  
+[Berkhamsted 2015](https://nicholas-h-bingham.github.io/files/personal/reminiscences/berkhamsted/Berkhamsted2015.pdf)  
 
 ### Miscellanea
 
-[The Crash of 2008](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheCrashOf2008.pdf)
-[Five Questions](https://nicholas-h-bingham.github.io/files/personal/reminiscences/FiveQuestions.pdf)
+[The Crash of 2008](https://nicholas-h-bingham.github.io/files/personal/reminiscences/TheCrashOf2008.pdf)  
+[Five Questions](https://nicholas-h-bingham.github.io/files/personal/reminiscences/FiveQuestions.pdf)  
 
 
 
