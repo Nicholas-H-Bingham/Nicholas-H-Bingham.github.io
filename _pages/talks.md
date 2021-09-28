@@ -25,6 +25,7 @@ Please find below notes for talks that I have given.
 [Aspects of Prediction, Birbeck College, 2012-04-11](https://nicholas-h-bingham.github.io/files/talks/AspectsOfPrediction_BirbeckCollege2012.pdf)  
 [Keynote Speech - Conference on Everything, Churchill College, 2012-05-05](https://nicholas-h-bingham.github.io/files/talks/ConferenceOnEverything_ChurchillCollege2012.pdf)  
 [Risk for Actuaries and Risk for Everyone, London School of Economics, 2012-11-15](https://nicholas-h-bingham.github.io/files/talks/RiskForActuariesAndRiskForEveryone_LondonSchoolOfEconomics2012.pdf)  
+[Statistical Aspects of Modelling and Prediction for Financial Time Series, Essen, 2012-11-21](https://nicholas-h-bingham.github.io/files/talks/StatisticalAspectsOfModellingAndPredictionForFinancialTimeSeries_Essen2012.pdf)  
 [Probability Everywhere, Manchester, 2012-12-18 & 2012-12-19](https://nicholas-h-bingham.github.io/files/talks/ProbabilityEverywhere_Manchester2012.pdf)  
 
 ## 2013
