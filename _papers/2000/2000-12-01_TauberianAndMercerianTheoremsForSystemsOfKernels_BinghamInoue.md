@@ -1,14 +1,14 @@
 ---
 title: "Tauberian and Mercerian Theorems for Systems of Kernels"
 collection: papers
-permalink: /papers/2010-10-01-paper-title-number-2
+permalink: /papers/2000-12-01_TauberianAndMercerianTheoremsForSystemsOfKernels
 excerpt: ''
 date: 2000-12-01
 venue: 'Journal of Mathematical Analysis and Applications'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+paperurl: 'https://doi.org/10.1006/jmaa.2000.6972'
+citation: 'N. H. Bingham and A. Inoue &quot;Tauberian and Mercerian Theorems for Systems of Kernels&quot; <i>Journal of Mathematical Analysis and Applications</i>. 252(1) pages 177-197.'
 ---
 
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
+[Download paper here](https://nicholas-h-bingham.github.io/files/papers/2000/TauberianAndMercerianTheoremsForSystemsOfKernels_BinghamInoue.pdf)
 
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
+[Download bibTeX file here](https://nicholas-h-bingham.github.io/files/papers/2000/TauberianAndMercerianTheoremsForSystemsOfKernels_BinghamInoue.bib)  
