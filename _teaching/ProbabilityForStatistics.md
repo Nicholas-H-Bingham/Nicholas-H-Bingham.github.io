@@ -1,5 +1,5 @@
 ---
-title: "ProbabilityForStatistics"
+title: "Probability For Statistics"
 collection: teaching
 permalink: /teaching/ProbabilityForStatistics
 venue: "Imperial College London, Faculty of Natural Sciences, Department of Mathematics"
